@@ -1,252 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rez.ink | Jeffrey Winkle</title>
 
-<title>rez.ink | Jeffrey Winkle</title>
+  <style>
+    *{
+      box-sizing:border-box;
+    }
 
-<style>
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#0b0b0b;
+      color:white;
+      line-height:1.6;
+    }
 
     .nav{
-    position:sticky;
-    top:0;
-    background:#0b0b0b;
-    padding:14px;
-    display:flex;
-    justify-content:center;
-    gap:24px;
-    border-bottom:1px solid #222;
-    z-index:100;
-}
+      position:sticky;
+      top:0;
+      background:rgba(11,11,11,0.96);
+      padding:14px 18px;
+      display:flex;
+      justify-content:center;
+      gap:24px;
+      flex-wrap:wrap;
+      border-bottom:1px solid #222;
+      z-index:100;
+      backdrop-filter:blur(8px);
+    }
 
-.nav a{
-    color:#ccc;
-    text-decoration:none;
-    font-size:15px;
-    transition:0.2s;
-}
+    .nav a{
+      color:#ccc;
+      text-decoration:none;
+      font-size:15px;
+      transition:color 0.2s ease;
+    }
 
-.nav a:hover{
-    color:#d4af37;
-}
-    
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0b0b0b;
-    color:white;
-}
+    .nav a:hover{
+      color:#d4af37;
+    }
 
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
-}
+    .container{
+      max-width:900px;
+      margin:auto;
+      padding:40px 20px 60px;
+    }
 
-.hero{
-    text-align:center;
-}
+    .hero{
+      text-align:center;
+    }
 
-.hero img{
-    width:180px;
-    height:180px;
-    object-fit:cover;
-    border-radius:100%;
-    border:3px solid #d4af37;
-}
+    .hero img{
+      width:180px;
+      height:180px;
+      object-fit:cover;
+      border-radius:50%;
+      border:3px solid #d4af37;
+      display:block;
+      margin:0 auto;
+    }
 
-h1{
-    margin-top:20px;
-    font-size:40px;
-}
+    h1{
+      margin:20px 0 10px;
+      font-size:40px;
+    }
 
-.tagline{
-    font-size:20px;
-    color:#c7c7c7;
-}
+    .tagline{
+      font-size:20px;
+      color:#c7c7c7;
+      margin-bottom:10px;
+    }
 
-.links{
-    margin-top:40px;
-}
+    .hero p{
+      max-width:700px;
+      margin:22px auto 0;
+      color:#cfcfcf;
+      font-size:18px;
+    }
 
-.card{
-    background:#151515;
-    border:1px solid #2b2b2b;
-    border-radius:12px;
-    padding:20px;
-    margin-bottom:15px;
-    text-decoration:none;
-    display:block;
-    color:white;
-}
+    .social-top{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      margin-top:16px;
+      flex-wrap:wrap;
+    }
 
-.card:hover{
-    border:1px solid #d4af37;
-    transform:scale(1.02);
-}
+    .social-top a{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      background:#111;
+      border:1px solid rgba(212,175,55,0.35);
+      text-decoration:none;
+      transition:transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
 
-.card h3{
-    margin:0;
-}
+    .social-top a:hover{
+      transform:translateY(-4px) scale(1.08);
+      box-shadow:0 0 18px rgba(212,175,55,0.28);
+      border-color:#d4af37;
+    }
 
-.card p{
-    margin:5px 0 0 0;
-    color:#bdbdbd;
-}
+    .social-top img{
+      width:24px;
+      height:24px;
+      filter:invert(77%) sepia(32%) saturate(702%) hue-rotate(6deg) brightness(94%) contrast(89%);
+    }
 
-.social-top{
-    display:flex;
-    justify-content:center;
-    gap:18px;
-    margin-top:16px;
-    flex-wrap:wrap;
-}
+    .links{
+      margin-top:40px;
+    }
 
-.social-top a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:52px;
-    height:52px;
-    border-radius:50%;
-    background:#111;
-    border:1px solid rgba(212,175,55,0.35);
-    text-decoration:none;
-    transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .card{
+      background:#151515;
+      border:1px solid #2b2b2b;
+      border-radius:12px;
+      padding:20px;
+      margin-bottom:15px;
+      text-decoration:none;
+      display:block;
+      color:white;
+      transition:transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
 
-.social-top a:hover{
-    transform:translateY(-4px) scale(1.08);
-    box-shadow:0 0 18px rgba(212,175,55,0.28);
-}
+    .card:hover{
+      border-color:#d4af37;
+      transform:scale(1.02);
+      box-shadow:0 10px 24px rgba(0,0,0,0.28);
+    }
 
-.social-top img{
-    width:24px;
-    height:24px;
-    filter:invert(77%) sepia(32%) saturate(702%) hue-rotate(6deg) brightness(94%) contrast(89%);
-}
+    .card h3{
+      margin:0;
+      font-size:22px;
+    }
 
-.footer{
-    margin-top:60px;
-    text-align:center;
-    color:#777;
-    font-size:14px;
-}
+    .card p{
+      margin:8px 0 0 0;
+      color:#bdbdbd;
+      font-size:16px;
+    }
 
-.footer a{
-    color:#999;
-    text-decoration:none;
-    margin:0 8px;
-}
+    .footer{
+      margin-top:60px;
+      text-align:center;
+      color:#777;
+      font-size:14px;
+    }
 
-.footer a:hover{
-    color:#d4af37;
-}
+    .footer hr{
+      border:none;
+      border-top:1px solid #222;
+      margin:28px auto;
+      max-width:520px;
+    }
 
-</style>
+    .footer a{
+      color:#999;
+      text-decoration:none;
+      margin:0 8px;
+      transition:color 0.2s ease;
+    }
 
+    .footer a:hover{
+      color:#d4af37;
+    }
+  </style>
 </head>
 
 <body>
-    
-<div class="nav">
 
-  <a href="/">Home</a>
-  <a href="/consult">Consult</a>
-  <a href="/architect">Architect</a>
-  <a href="/invest">Invest</a>
-  <a href="/studios">Studios</a>
-  <a href="/contact">Contact</a>
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="/consult">Consult</a>
+    <a href="/architect">Architect</a>
+    <a href="/invest">Invest</a>
+    <a href="/studios">Studios</a>
+    <a href="/contact">Contact</a>
+    <a href="/apply">Apply</a>
+  </div>
 
-</div>
-    
-<div class="container">
+  <div class="container">
 
-<div class="hero">
+    <div class="hero">
+      <img src="jeffrey-winkle.jpg" alt="Jeffrey Winkle">
 
-<img src="jeffrey-winkle.jpg" alt="Jeffrey Winkle">
+      <h1>Jeffrey Winkle</h1>
 
-<h1>Jeffrey Winkle</h1>
+      <div class="tagline">
+        Architect • Developer • Strategist
+      </div>
 
-<div class="tagline">
-Architect • Developer • Strategist
-</div>
+      <div class="social-top">
+        <a href="https://www.instagram.com/jeffrey_winkle" target="_blank" aria-label="Instagram">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+        </a>
 
-<div class="social-top">
-  <a href="https://www.instagram.com/jeffrey_winkle" target="_blank" aria-label="Instagram">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
-  </a>
+        <a href="https://www.threads.com/@jeffrey_winkle" target="_blank" aria-label="Threads">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/threads.svg" alt="Threads">
+        </a>
 
-  <a href="https://www.threads.com/@jeffrey_winkle" target="_blank" aria-label="Threads">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/threads.svg" alt="Threads">
-  </a>
+        <a href="https://www.tiktok.com/@jeffreywinkle6" target="_blank" aria-label="TikTok">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
+        </a>
 
-  <a href="https://www.tiktok.com/@jeffreywinkle6" target="_blank" aria-label="TikTok">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
-  </a>
+        <a href="https://www.facebook.com/share/183JnLuYk5/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+        </a>
+      </div>
 
-  <a href="https://www.facebook.com/share/183JnLuYk5/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
-  </a>
-</div>
+      <p>
+        Founder of the Rezolute ecosystem. Consulting, deal architecture, creative media,
+        performance training, and future-facing ventures.
+      </p>
+    </div>
 
-<p>
-Founder of the Rezolute ecosystem.
-Consulting, deal architecture, creative media, performance training, and future-facing ventures.
-</p>
+    <div class="links">
+      <a class="card" href="/architect">
+        <h3>The Architect</h3>
+        <p>Strategic consulting, deal structuring, and growth architecture.</p>
+      </a>
 
-</div>
+      <a class="card" href="/consult">
+        <h3>Consult</h3>
+        <p>Direct consulting access through the rez.ink command system.</p>
+      </a>
 
-<div class="links">
+      <a class="card" href="/invest">
+        <h3>Invest</h3>
+        <p>Private access point for capital, partnerships, and future deal flow.</p>
+      </a>
 
-<a class="card" href="/architect">
-<h3>The Architect</h3>
-<p>Strategic consulting, deal structuring, and growth architecture.</p>
-</a>
+      <a class="card" href="/studios">
+        <h3>Rezolute Studios</h3>
+        <p>Branding, design, media production, and creative collaboration.</p>
+      </a>
 
-<a class="card" href="/consult">
-<h3>Consult</h3>
-<p>Direct consulting access through the rez.ink command system.</p>
-</a>
+      <a class="card" href="/contact">
+        <h3>Contact</h3>
+        <p>Direct communication for business, consulting, partnerships, and media.</p>
+      </a>
+    </div>
 
-<a class="card" href="/invest">
-<h3>Invest</h3>
-<p>Private access point for capital, partnerships, and future deal flow.</p>
-</a>
+    <footer class="footer">
+      <p>rez.ink • Operated within the Rezolute ecosystem</p>
 
-<a class="card" href="/studios">
-<h3>Rezolute Studios</h3>
-<p>Branding, design, media production, and creative collaboration.</p>
-</a>
+      <hr>
 
-<a class="card" href="/contact">
-<h3>Contact</h3>
-<p>Direct communication for business, consulting, partnerships, and media.</p>
-</a>
+      <p>External Ecosystem</p>
 
-</div>
+      <a href="https://rezoluteenterprises.com">Rezolute Enterprises</a> |
+      <a href="https://rezolutestudios.com">Rezolute Studios</a> |
+      <a href="https://jeff.health">Firekeeper</a> |
+      <a href="https://populareventsnearme.com">Popular Events Near Me</a>
 
-<footer class="footer">
-  <p>rez.ink • Operated within the Rezolute ecosystem</p>
+      <br><br>
 
-  <hr>
+      <a href="/terms">Terms</a> |
+      <a href="/privacy">Privacy</a>
+    </footer>
 
-  <p>External Ecosystem</p>
-
-  <a href="https://rezoluteenterprises.com">Rezolute Enterprises</a> |
-  <a href="https://rezolutestudios.com">Rezolute Studios</a> |
-  <a href="https://jeff.health">Firekeeper</a> |
-  <a href="https://populareventsnearme.com">Popular Events Near Me</a>
-
-  <br><br>
-
-  <a href="/terms">Terms</a> |
-  <a href="/privacy">Privacy</a>
-</footer>
-
-</div>
+  </div>
 
 </body>
 </html>
