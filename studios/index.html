@@ -1,64 +1,41 @@
-      <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171714">
+  <meta name="description" content="Rezolute Studios turns a clear direction into imagery, identity, content, and campaigns for people, brands, communities, and organizations.">
+  <meta property="og:title" content="Rezolute Studios | Creative execution with direction">
+  <meta property="og:description" content="Creative direction, visual production, brand systems, and campaigns built around a real objective.">
+  <title>Rezolute Studios | rez.ink</title>
   <style>
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:#0b0b0b;
-      color:white;
-      text-align:center;
-      padding:60px 20px;
-    }
-
-    .wrap{
-      max-width:800px;
-      margin:auto;
-    }
-
-    h1{
-      color:#d4af37;
-      font-size:42px;
-      margin-bottom:10px;
-    }
-
-    p{
-      font-size:20px;
-      line-height:1.6;
-      color:#d0d0d0;
-    }
-
-    a{
-      color:#d4af37;
-      text-decoration:none;
-      font-weight:600;
-    }
-
-    .back{
-      display:inline-block;
-      margin-top:30px;
-    }
+    :root{--ink:#171714;--red:#d9362b;--ivory:#f2eee4;--paper:#fbf8f1;--line:#c9c2b5;--muted:#68645d;--white:#fff;--shadow:0 20px 70px rgba(0,0,0,.18)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}.eyebrow{margin:0 0 14px;color:var(--red);font-size:.74rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.top{position:sticky;top:0;z-index:20;background:rgba(23,23,20,.96);color:white;border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px)}.top .wrap{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}.wordmark{text-decoration:none;font-weight:950;letter-spacing:-.04em;font-size:1.22rem}.wordmark span{display:block;color:var(--red);font-size:.68rem;letter-spacing:.28em}.nav{display:flex;gap:20px;align-items:center}.nav a{text-decoration:none;color:#ddd;font-size:.86rem}.nav .cta-link{padding:9px 14px;border:1px solid var(--red);border-radius:999px;color:white}
+    .hero{background:var(--ink);color:white;display:grid;grid-template-columns:1.08fr .92fr;min-height:710px}.hero-copy{padding:90px max(36px,calc((100vw - 1180px)/2)) 80px;display:flex;flex-direction:column;justify-content:center}.hero h1{margin:10px 0 28px;font:500 clamp(3.8rem,8.5vw,7.9rem)/.84 Georgia,"Times New Roman",serif;letter-spacing:-.065em}.hero h1 em{color:#ef6a60;font-weight:400}.lead{max-width:620px;color:#ddd8cf;font-size:clamp(1.12rem,2.3vw,1.42rem)}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 19px;border-radius:2px;text-decoration:none;font-weight:900;border:1px solid transparent;transition:.18s}.button:hover{transform:translateY(-2px)}.red{background:var(--red);color:white}.outline{border-color:rgba(255,255,255,.38);color:white}.hero-image{position:relative;min-height:620px;margin:0;overflow:hidden}.hero-image img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);transition:.5s}.hero-image:hover img{filter:grayscale(25%)}.hero-image figcaption{position:absolute;left:20px;right:20px;bottom:18px;display:flex;justify-content:space-between;color:white;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;text-shadow:0 2px 8px #000}
+    section{padding:84px 0}h2{margin:8px 0 18px;font:500 clamp(2.6rem,6vw,5rem)/.95 Georgia,"Times New Roman",serif;letter-spacing:-.05em}.intro{max-width:760px;margin:0;color:var(--muted);font-size:1.08rem}.relationship{background:var(--ivory)}.relationship-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px;align-items:start}.relationship h2{margin-top:0}.division{display:grid;gap:14px}.division article{padding:24px;border:1px solid var(--line);background:var(--paper)}.division h3{margin:0 0 8px;font:500 1.55rem Georgia,serif}.division p{margin:0;color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px}.service{padding:25px;border-top:4px solid var(--red);background:var(--ivory)}.service span{display:block;color:var(--red);font:500 1.4rem Georgia,serif}.service h3{margin:13px 0 8px}.service p{margin:0;color:var(--muted)}
+    .work{background:var(--ink);color:white}.work h2{color:white}.work .intro{color:#bbb7ae}.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:42px}.work-card{margin:0}.work-card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.work-card figcaption{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.2);display:flex;justify-content:space-between;gap:20px}.work-card strong{font-size:1.08rem}.work-card span{color:#aaa49b;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em}
+    .packages{background:var(--ivory)}.package-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:40px}.package{display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);background:var(--paper)}.package.featured{background:var(--red);color:white;border-color:var(--red);box-shadow:var(--shadow)}.package-tag{font-size:.72rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--red)}.featured .package-tag{color:white}.package h3{margin:10px 0 3px;font:500 1.8rem Georgia,serif}.price{font-weight:900}.package p{color:var(--muted)}.featured p,.featured li{color:#fff5f2}.package ul{padding-left:18px;margin-bottom:24px}.package .button{margin-top:auto;align-self:flex-start}.package:not(.featured) .button{background:var(--ink);color:white}.featured .button{background:white;color:var(--red)}.scope{margin-top:22px;color:var(--muted);font-size:.9rem}
+    .cta{background:var(--red);color:white;text-align:center;padding:72px 0}.cta h2{max-width:820px;margin:0 auto 18px}.cta p{max-width:690px;margin:0 auto;color:#fff2ef;font-size:1.08rem}.cta .hero-actions{justify-content:center}.cta .button{background:var(--ink);color:white}.foot{padding:30px 0;background:#0c0c0b;color:#aaa49b;font-size:.82rem}.foot .wrap{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}.foot a{color:#ef6a60}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.hero-copy{padding:72px 28px}.hero-image{min-height:520px}.relationship-grid{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.nav a:not(.cta-link){display:none}}
+    @media(max-width:620px){.wrap{width:min(100% - 24px,1180px)}.hero h1{font-size:clamp(3.5rem,19vw,5.4rem)}section{padding:62px 0}.hero-image{min-height:440px}.services,.work-grid,.package-grid{grid-template-columns:1fr}.button{width:100%}.package .button{align-self:stretch}.foot .wrap{display:block}.foot span{display:block;margin-top:8px}}
   </style>
 </head>
 <body>
-      <p>
-Instagram: 
-<a href="https://www.instagram.com/rezolute_studioz" target="_blank">
-@rezolute_studioz
-</a>
-</p>
-  <div class="wrap">
-  <h1>Rezolute Studios</h1>
-<p>Branding, design, visual media, content production, and creative collaboration.</p>
-    <a class="back" href="/">← Back to rez.ink</a>
-  </div>
+  <nav class="top" aria-label="Primary navigation"><div class="wrap"><a class="wordmark" href="/">REZOLUTE<span>STUDIOS</span></a><div class="nav"><a href="#services">Services</a><a href="#packages">Packages</a><a href="/architect">The Architect</a><a class="cta-link" href="/apply">Start a brief</a></div></div></nav>
+  <header class="hero"><div class="hero-copy"><p class="eyebrow">Creative direction · Production · Campaigns</p><h1>Make the<br>plan <em>visible.</em></h1><p class="lead">Rezolute Studios turns a clear direction into imagery, identity, content, and campaigns for people, brands, communities, and organizations.</p><div class="hero-actions"><a class="button red" href="#packages">See the packages</a><a class="button outline" href="/apply">Start a creative brief</a></div></div><figure class="hero-image"><img src="assets/after-hours.png" alt="Black and white concept portrait of a man in an empty bar"><figcaption><span>After Hours / Concept study</span><span>AI visual study</span></figcaption></figure></header>
+  <main>
+    <section class="relationship"><div class="wrap relationship-grid"><div><p class="eyebrow">How the ecosystem works</p><h2>Direction before decoration.</h2></div><div class="division"><article><h3>The Architect plans the move.</h3><p>Goal definition, audience, milestones, deliverables, owners, measures, and the 30- or 90-day roadmap.</p></article><article><h3>Rezolute Studios produces the evidence.</h3><p>Creative direction, visual identity, photography, content, design, campaigns, and the partner team needed to bring the plan to life.</p></article></div></div></section>
+    <section id="services"><div class="wrap"><p class="eyebrow">Studio scope</p><h2>Creative work with a job to do.</h2><p class="intro">Every assignment starts with the person, audience, objective, intended use, and one decision the work should help someone make.</p><div class="services"><article class="service"><span>01</span><h3>Creative direction</h3><p>Concept, references, moodboard, visual language, wardrobe, location, shot list, and production brief.</p></article><article class="service"><span>02</span><h3>Brand and campaign</h3><p>Message hierarchy, identity direction, campaign world, launch assets, and channel plan.</p></article><article class="service"><span>03</span><h3>Portrait and content</h3><p>Directed image-making, useful crops, short-form content, selects, finishing, and delivery plan.</p></article><article class="service"><span>04</span><h3>Partner production</h3><p>Talent, stylists, photographers, filmmakers, designers, venues, community organizations, and specialists as the scope requires.</p></article></div></div></section>
+    <section class="work"><div class="wrap"><p class="eyebrow">Concept language</p><h2>People first. Every detail intentional.</h2><p class="intro">These AI-generated visual studies demonstrate possible direction. They are not represented as client work.</p><div class="work-grid"><figure class="work-card"><img src="assets/after-hours.png" alt="Monochrome editorial concept portrait"><figcaption><strong>After Hours</strong><span>New faces · quiet presence</span></figcaption></figure><figure class="work-card"><img src="assets/the-author.png" alt="Creative founder in an ivory suit against a red studio set"><figcaption><strong>The Author</strong><span>Personal brands · bold intent</span></figcaption></figure></div></div></section>
+    <section class="packages" id="packages"><div class="wrap"><p class="eyebrow">Starting points</p><h2>Choose the production the roadmap calls for.</h2><p class="intro">Planning ranges in USD. Usage, travel, locations, studio hire, talent, specialists, props, licensing, and paid media are scoped separately when needed.</p><div class="package-grid">
+      <article class="package"><span class="package-tag">Direction only</span><h3>Direction Kit</h3><div class="price">$750</div><p>For the person or brand that needs a coherent creative plan before hiring production.</p><ul><li>60-minute direction session</li><li>One concept and moodboard</li><li>Visual language and message direction</li><li>Shot or content list</li><li>Production brief and next-step budget</li></ul><a class="button" href="/apply">Start the direction</a></article>
+      <article class="package featured"><span class="package-tag">Signature production</span><h3>Character Campaign</h3><div class="price">From $1,800</div><p>For a model, artist, founder, professional, or personal brand ready to create a deliberate body of launch-ready work.</p><ul><li>Concept, moodboard, and pre-production</li><li>Up to four hours of production</li><li>20 finished photographs</li><li>Two short vertical edits</li><li>Useful crops and 14-day launch map</li></ul><a class="button" href="/apply">Build the campaign</a></article>
+      <article class="package"><span class="package-tag">Business · organization</span><h3>Campaign System</h3><div class="price">From $4,500</div><p>For a launch, service line, program, event, or initiative requiring a coordinated creative system.</p><ul><li>Campaign strategy and creative platform</li><li>Message and visual system</li><li>One primary production day</li><li>Cross-channel asset set</li><li>30-day activation plan</li></ul><a class="button" href="/apply">Scope the system</a></article>
+      <article class="package"><span class="package-tag">Community · institution · place</span><h3>Public Story &amp; Place Campaign</h3><div class="price">From $15,000</div><p>For a community, coalition, institution, municipality, regional initiative, or qualified country-scale partner.</p><ul><li>Stakeholder and audience discovery</li><li>Narrative and creative platform</li><li>Participant-centered production plan</li><li>Campaign assets and rollout system</li><li>Measurement and stewardship plan</li></ul><a class="button" href="/apply">Request a scoped brief</a></article>
+    </div><p class="scope">Final deliverables, revision limits, usage rights, release forms, schedules, accessibility needs, approvals, and third-party costs are documented before production. Results such as representation, sales, grants, attendance, investment, or public adoption are not guaranteed.</p></div></section>
+    <section class="cta"><div class="wrap"><h2>Already have a plan? We will help you make it visible.</h2><p>If the direction is still unclear, begin with The Architect. If the objective and audience are defined, start a Rezolute Studios brief.</p><div class="hero-actions"><a class="button" href="/apply">Start a creative brief</a></div></div></section>
+  </main>
+  <footer class="foot"><div class="wrap"><span>© 2026 Rezolute Studios · Tulsa, Oklahoma</span><span><a href="/">Rez.Ink</a> · <a href="/architect">The Architect</a> · <a href="https://www.instagram.com/rezolute_studioz" target="_blank" rel="noopener">Instagram</a></span></div></footer>
 </body>
 </html>
-      
-      
-      
-      
-  </head>
